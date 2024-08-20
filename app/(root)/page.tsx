@@ -6,7 +6,7 @@ import TotalBalancebox from '@/components/TotalBalancebox';
 const Home = () => {
 
   const loggedIn = { firstName: 'Adrian', lastName:'JSM', email:'contact@jsmastery.pro' };
-  return (
+  return ( 
     <section className="home">
       <div className="home-content">
         <header className='home-header'>
