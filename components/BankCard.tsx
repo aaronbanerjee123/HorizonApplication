@@ -2,6 +2,7 @@ import { formatAmount } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Copy from "./Copy";
 
 const BankCard = ({
   account,
@@ -22,7 +23,7 @@ const BankCard = ({
           </div>
           <article className="flex flex-col gap-2">
             <div className="flex justify-between">
-              <h1 className="text-12 font-semibold text-white">{userName}</h1>
+              <h1 className="text-12 font-semibold text-white">{account.name}</h1>
               <h2 className="text-12 font-semibold text-white">●● / ●●</h2>
             </div>
 
@@ -52,7 +53,7 @@ const BankCard = ({
         />
       </Link>
 
-      {showBalance && }
+      {showBalance && <Copy title={account?.shareableId}/>}
     </div>
   );
 };

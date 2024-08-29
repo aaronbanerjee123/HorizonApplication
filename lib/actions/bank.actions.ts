@@ -29,7 +29,7 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
         });
         const accountData = accountsResponse.data.accounts[0];
 
-        // get institution info from plaid
+        // get institution info from plaid 
         const institution = await getInstitution({
           institutionId: accountsResponse.data.item.institution_id!,
         });
@@ -84,7 +84,7 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
       (transferData: Transaction) => ({
         id: transferData.$id,
         name: transferData.name!,
-        amount: transferData.amount!,
+        amount: transferData.amount!, 
         date: transferData.$createdAt,
         paymentChannel: transferData.channel,
         category: transferData.category,
